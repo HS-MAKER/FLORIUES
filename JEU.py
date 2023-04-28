@@ -24,8 +24,6 @@ def get_choices():
     print(saison.get(), condition.get(), nutriments.get(), luminosite.get())
 
 
-
-
 # Catégorie 5 : Luminosité
 luminosite_frame = tk.LabelFrame(fenetre, text="LUMINOSITÉ",font=("System", 4), bg="#0dbbe9")
 luminosite_frame.pack(padx=10, pady=(80,10))
@@ -105,22 +103,6 @@ solnaturellementriche_button.pack(pady=5)
 solnaturellementpauvre_button = tk.Radiobutton(nutriments_frame, text="Sol naturellement pauvre",font=("Courier", 10), variable=nutriments,
                                                value="Sol naturellement pauvre", fg="black", bg="#F7FF3C")
 solnaturellementpauvre_button.pack(pady=5)
-
-luminosite = tk.StringVar()
-luminosite.set(None)
-
-Faible_button = tk.Radiobutton(luminosite_frame, text="Faible",font=("Courier", 10), variable=luminosite, value="Faible", fg="black",
-                               bg="#9E7BFF")
-Faible_button.pack(pady=5)
-
-Moyenne_button = tk.Radiobutton(luminosite_frame, text="Moyenne",font=("Courier", 10), variable=luminosite, value="Moyenne", fg="black",
-                                bg="#9E7BFF")
-Moyenne_button.pack(pady=5)
-
-Forte_button = tk.Radiobutton(luminosite_frame, text="Forte",font=("Courier", 10), variable=luminosite, value="Forte", fg="black",
-                              bg="#9E7BFF")
-Forte_button.pack(pady=5)
-
 
 def pluie():
     t = turtle.RawTurtle(canvas)
