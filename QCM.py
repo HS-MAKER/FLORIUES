@@ -134,7 +134,7 @@ class QCM(tk.Tk):
         else:
             tkinter.messagebox.showinfo('Score', ' Votre score est de {} sur  {}'.format(self.score, len(self.questions)))
             self.destroy()
-            os.popen("python menu_principal.py")
+            os.popen("python MENU_PRINCIPAL.py.py")
 
 
 # Créer l'interface utilisateur avec les questions sélectionnées
@@ -142,7 +142,7 @@ qcm = QCM(selected_questions)
 
 def menu():
     qcm.destroy()
-    os.popen("python menu_principal.py")
+    os.popen("python MENU_PRINCIPAL.py")
     
 def quitter():
     exit()

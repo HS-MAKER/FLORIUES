@@ -301,7 +301,7 @@ def dessin():
 
 def menu():
     fenetre.destroy()
-    os.popen("python menu_principal.py")
+    os.popen("python MENU_PRINCIPAL.py")
     
 def quitter():
     exit()

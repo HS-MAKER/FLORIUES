@@ -25,7 +25,7 @@ bordure_boutons = tk.Frame(accueil, highlightbackground = "white", highlightthic
 #fonction si boutons appuyer
 def continuer():
     accueil.destroy()
-    os.popen("python menu_principal.py")
+    os.popen("python MENU_PRINCIPAL.py")
 
 #creation de la frame et des boutons
 btn_frame = tk.Frame(accueil, bordure_boutons , bg = "#0dbbe9")

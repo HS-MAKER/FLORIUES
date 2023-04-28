@@ -29,18 +29,18 @@ btn_frame4 = tk.Frame(menu, bordure_boutons_retour , bg = "#0dbbe9")
 
 def jeu():
     menu.destroy()
-    os.popen("python jeu.py")
+    os.popen("python JEU.py")
 
 def qcm():
     menu.destroy()
-    os.popen("Python qcm.py")
+    os.popen("Python QCM.py")
 
 def quitter():
     exit()
 
 def retour():
     menu.destroy()
-    os.popen("Python accueil.py")
+    os.popen("Python ACCUEIL.py")
 
 #creations de boutons
 btn_jouer = tk.Button(btn_frame, text = "JOUER", bg = "black", fg = "white", height = 1, width = 10, command = jeu)
