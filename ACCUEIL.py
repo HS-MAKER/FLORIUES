@@ -24,8 +24,7 @@ bordure_boutons = tk.Frame(accueil, highlightbackground = "white", highlightthic
 
 #fonction si boutons appuyer
 def continuer():
-    print("Le bouton Continuer a été cliqué.")
-    
+    accueil.destroy()
     os.popen("python menu_principal.py")
 
 #creation de la frame et des boutons
@@ -45,7 +44,5 @@ label_bienvenue.pack(fill="both",expand=tk.YES, padx=10, pady=10)
 btn_frame.pack(padx = (0,5), pady = (0,5), side="right")
 btn_continuer.pack()
 
-
 #afficher la fenetre
 accueil.mainloop()
-

@@ -1,4 +1,4 @@
-import random
+﻿import random
 import tkinter as tk
 import tkinter.font as font
 import tkinter.messagebox

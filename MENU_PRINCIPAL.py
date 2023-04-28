@@ -69,4 +69,3 @@ btn_retour.pack()
 
 #affichage fenetre
 menu.mainloop()
-
