@@ -26,9 +26,29 @@ def get_choices():
 
 
 
+# Catégorie 5 : Luminosité
+luminosite_frame = tk.LabelFrame(fenetre, text="LUMINOSITÉ",font=("System", 4), bg="#0dbbe9")
+luminosite_frame.pack(padx=10, pady=(80,10))
+
+luminosite = tk.StringVar()
+luminosite.set(None)
+
+
+Forte_button = tk.Radiobutton(luminosite_frame, text="Forte",font=("Courier", 10), variable=luminosite, value="Forte", fg="black",
+                              bg="#9E7BFF")
+Forte_button.pack(pady=5)
+
+Moyenne_button = tk.Radiobutton(luminosite_frame, text="Moyenne",font=("Courier", 10), variable=luminosite, value="Moyenne", fg="black",
+                                bg="#9E7BFF")
+Moyenne_button.pack(pady=5)
+
+Faible_button = tk.Radiobutton(luminosite_frame, text="Faible",font=("Courier", 10), variable=luminosite, value="Faible", fg="black",
+                               bg="#9E7BFF")
+Faible_button.pack(pady=5)
+
 # Catégorie 2 : Saison
 saison_frame = tk.LabelFrame(fenetre, text="SAISON",font=("System", 4), bg="#0dbbe9")
-saison_frame.pack(padx=10, pady=(80,10))
+saison_frame.pack(padx=10, pady=10)
 
 saison = tk.StringVar()
 saison.set(None)
@@ -36,12 +56,12 @@ saison.set(None)
 ete_button = tk.Radiobutton(saison_frame, text="Été",font=("Courier", 10), variable=saison, value="Été", fg="black", bg="#01F9C6")
 ete_button.pack(pady=5)
 
+Automne_button = tk.Radiobutton(saison_frame, text="Automne",font=("Courier", 10), variable=saison, value="Automne", fg="black", bg="#01F9C6")
+Automne_button.pack(pady=5)
+
 Printemps_button = tk.Radiobutton(saison_frame, text="Printemps",font=("Courier", 10), variable=saison, value="Printemps", fg="black",
                                   bg="#01F9C6")
 Printemps_button.pack(pady=5)
-
-Automne_button = tk.Radiobutton(saison_frame, text="Automne",font=("Courier", 10), variable=saison, value="Automne", fg="black", bg="#01F9C6")
-Automne_button.pack(pady=5)
 
 # Catégorie 3 : Condition météo
 condition_frame = tk.LabelFrame(fenetre, text="CONDITION MÉTÉO",font=("System", 4), bg="#0dbbe9")
@@ -62,6 +82,10 @@ pluiediluvienne_button = tk.Radiobutton(condition_frame, text="Pluie diluvienne"
                                         value="Pluie diluvienne", fg="black", bg="#FFC0CB")
 pluiediluvienne_button.pack(pady=5)
 
+
+
+
+
 # Catégorie 4 : Nutriments du sol
 nutriments_frame = tk.LabelFrame(fenetre, text="NUTRIMENTS DU SOL",font=("System", 4), bg="#0dbbe9")
 nutriments_frame.pack(padx=10, pady=10)
@@ -69,21 +93,18 @@ nutriments_frame.pack(padx=10, pady=10)
 nutriments = tk.StringVar()
 nutriments.set(None)
 
-solnaturellementpauvre_button = tk.Radiobutton(nutriments_frame, text="Sol naturellement pauvre",font=("Courier", 10), variable=nutriments,
-                                               value="Sol naturellement pauvre", fg="black", bg="#F7FF3C")
-solnaturellementpauvre_button.pack(pady=5)
-
-solnaturellementriche_button = tk.Radiobutton(nutriments_frame, text="Sol naturellement riche",font=("Courier", 10), variable=nutriments,
-                                              value="Sol naturellement riche", fg="black", bg="#F7FF3C")
-solnaturellementriche_button.pack(pady=5)
 
 utilisationdengrais_button = tk.Radiobutton(nutriments_frame, text="Utilisation d’engrais",font=("Courier", 10), variable=nutriments,
                                             value="Utilisation d’engrais", fg="black", bg="#F7FF3C")
 utilisationdengrais_button.pack(pady=5)
 
-# Catégorie 5 : Luminosité
-luminosite_frame = tk.LabelFrame(fenetre, text="LUMINOSITÉ",font=("System", 4), bg="#0dbbe9")
-luminosite_frame.pack(padx=10, pady=10)
+solnaturellementriche_button = tk.Radiobutton(nutriments_frame, text="Sol naturellement riche",font=("Courier", 10), variable=nutriments,
+                                              value="Sol naturellement riche", fg="black", bg="#F7FF3C")
+solnaturellementriche_button.pack(pady=5)
+
+solnaturellementpauvre_button = tk.Radiobutton(nutriments_frame, text="Sol naturellement pauvre",font=("Courier", 10), variable=nutriments,
+                                               value="Sol naturellement pauvre", fg="black", bg="#F7FF3C")
+solnaturellementpauvre_button.pack(pady=5)
 
 luminosite = tk.StringVar()
 luminosite.set(None)
@@ -275,10 +296,10 @@ def dessin():
     # Dessin du cercle
     t.penup()
     t.hideturtle()
-    t.goto(30, 150)
+    t.goto(20, 150)
     t.pendown()
     t.begin_fill()
-    t.circle(30)
+    t.circle(20)
     t.end_fill()
 
     t.penup()
